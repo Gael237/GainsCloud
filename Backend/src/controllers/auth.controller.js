@@ -131,6 +131,10 @@ const login = async (req, res) => {
 // ─── GET PERFIL PROPIO ───────────────────────────────────
 const getMe = async (req, res) => {
   try {
+    if (!req.user || !req.user.id) {
+      return res.status(401).json({ message: 'No autorizado' })
+    }
+
     const user = await User.findById(req.user.id).select('-password')
     if (!user) {
       return res.status(404).json({ message: 'Usuario no encontrado' })
@@ -149,5 +153,4 @@ const getMe = async (req, res) => {
     res.status(500).json({ message: 'Error interno del servidor' })
   }
 }
-
 module.exports = { register, login, getMe }
