@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0d0d0d;
+  color: #ffffff;
+  font-family: 'Exo 2', sans-serif;
+  min-height: 100vh;
+}
+
+:root {
+  --yellow: #e8ff00;
+  --yellow2: #ccdd00;
+  --orange: #ff6b00;
+  --red: #ff2222;
+  --green: #00ff88;
+  --blue: #00bfff;
+  --bg: #0d0d0d;
+  --bg2: #1a1a1a;
+  --bg3: #222222;
+  --bg4: #2a2a2a;
+  --border: #2a2a2a;
+  --border2: #3a3a3a;
+  --text: #ffffff;
+  --text2: #aaaaaa;
+  --text3: #555555;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--yellow);
+}
